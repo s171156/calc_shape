@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles_d.css">
+    <title>Desc</title>
+</head>
+
+<body>
+    <article>
+        <h1>操作説明書</h1>
+        <section>
+            <h2>整形の仕様</h2>
+            <ul>
+                <li>「□」記号は「x」へ変換</li>
+                <li class="ex">例：１００ｘ２＝□ => １００ｘ２＝ｘ</li>
+                <li>数式内の全角文字は自動で半角文字へ変換</li>
+                <li class="ex">例：１００ｘ２＝□ => 100x2=x</li>
+                <li>「掛け算記号：x」は「変数：x」と区別するため「*」に変換</li>
+                <li class="ex">例：100x2=x => 100*2=x</li>
+                <li>「÷」は「/」へ変換</li>
+                <li class="ex">例：100÷2=x => 100/2=x</li>
+                <li>「変数：x」や「＝」の無い計算式には自動で「変数：x」や「＝」を挿入</li>
+                <li class="ex">例：100÷2 => 100/2=x</li>
+                <li class="ex">例：100÷2= => 100/2=x</li>
+            </ul>
+        </section>
+        <section>
+            <h2>%の計算</h2>
+            <ul>
+                <li>数式内の「の」は「*」に、「％」は「*1/100」へ変換。</li>
+                <li class="ex">例：600の□%＝570 => 600*x*1/100＝570</li>
+            </ul>
+        </section>
+        <section>
+            <h2>逆数</h2>
+            <ul>
+                <li>「÷」の後ろの分数は逆数へ変換。また、「÷」は「*」へ変換</li>
+                <li class="ex">例：21÷1/5＝(□＋12)×7 => 21*5/1=(x+12)*7</li>
+                <li>＊電卓や計算ツールによっては「計算式の評価」に失敗するため</li>
+                <li class="ex">例：21÷3/7 => 21/3/7＝x => x=1（失敗）</li>
+                <li class="ex">例：21÷3/7 => 21*7/3＝x => x=49（成功）</li>
+            </ul>
+        </section>
+        <section>
+            <h2>計算の仕様</h2>
+            <ul>
+                <li>計算式の中に変数は<span>１つ</span>しか含むことができません。</li>
+                <li>変数が複数の場合は『整形結果』をphotomathで計算することを推奨します。</li>
+            </ul>
+        </section>
+    </article>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+div#calc {
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+p#equation_shaped,
+p#solution {
+    font-size: 30px;
+}
+
+div#result_equation,
+div#result_solution {
+    text-align: center;
+}
